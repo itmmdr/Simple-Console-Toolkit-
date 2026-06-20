@@ -1,5 +1,5 @@
 import random
-
+from main import main
 def guess_game():
     computer_choice = random.randint(1, 100)
 
@@ -30,7 +30,7 @@ def guess_game():
 
                 elif ask == "no":
                     print("Returning to the main menu...")
-                    return
+                    return main()
 
                 else:
                     print("Please enter 'yes' or 'no'.")
