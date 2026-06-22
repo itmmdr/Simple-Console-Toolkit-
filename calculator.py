@@ -1,4 +1,4 @@
-def calculator():
+def calculator(): 
     while True:
         print("\n=== Calculator ===")
         print("1. Addition")
