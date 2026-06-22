@@ -1,3 +1,5 @@
+from main import main
+
 def calculator(): 
     while True:
         print("\n=== Calculator ===")
@@ -12,23 +14,39 @@ def calculator():
         ).lower()
 
         if ask_choice in ["1", "addition"]:
-            number_1 = float(input("Enter first number: "))
-            number_2 = float(input("Enter second number: "))
+            try:
+                number_1 = float(input("Enter first number: "))
+                number_2 = float(input("Enter second number: "))
+            except ValueError:
+                print("You must enter a number.")
+                continue
             print(f"Result: {number_1 + number_2}")
 
         elif ask_choice in ["2", "subtraction"]:
-            number_1 = float(input("Enter first number: "))
-            number_2 = float(input("Enter second number: "))
+            try:
+                number_1 = float(input("Enter first number: "))
+                number_2 = float(input("Enter second number: "))
+            except ValueError:
+                print("You must enter a number.")
+                continue
             print(f"Result: {number_1 - number_2}")
 
         elif ask_choice in ["3", "multiplication"]:
-            number_1 = float(input("Enter first number: "))
-            number_2 = float(input("Enter second number: "))
+            try:
+                number_1 = float(input("Enter first number: "))
+                number_2 = float(input("Enter second number: "))
+            except ValueError:
+                print("You must enter a number.")
+                continue
             print(f"Result: {number_1 * number_2}")
 
         elif ask_choice in ["4", "division"]:
-            number_1 = float(input("Enter first number: "))
-            number_2 = float(input("Enter second number: "))
+            try:
+                number_1 = float(input("Enter first number: "))
+                number_2 = float(input("Enter second number: "))
+            except ValueError:
+                print("You must enter a number.")
+                continue
 
             if number_2 == 0:
                 print("Cannot divide by zero!")
@@ -37,7 +55,8 @@ def calculator():
 
         elif ask_choice in ["5", "exit"]:
             print("Goodbye!")
-            break
+            return main()
+            
 
         else:
             print("Invalid option! Try again.")
