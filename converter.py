@@ -189,6 +189,6 @@ def converter():
             volume()
         elif ask == '6':
             print("Goodbye 👋")
-            break
+            return
         else:
             print("Invalid option!")

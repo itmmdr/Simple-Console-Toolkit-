@@ -1,5 +1,3 @@
-from main import main
-
 def calculator(): 
     while True:
         print("\n=== Calculator ===")
@@ -55,11 +53,8 @@ def calculator():
 
         elif ask_choice in ["5", "exit"]:
             print("Goodbye!")
-            return main()
+            return 
             
 
         else:
             print("Invalid option! Try again.")
-
-
-calculator()

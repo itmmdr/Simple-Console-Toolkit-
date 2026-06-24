@@ -48,7 +48,7 @@ def grade_manager():
 
         elif choice in ["6", "exit"]:
             print("Exiting program...")
-            break
+            return
 
         else:
             print("Invalid option. Please try again.")
